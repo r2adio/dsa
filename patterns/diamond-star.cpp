@@ -2,7 +2,7 @@
 void star_pyramid(int &len) {
   char s = '*';
   char S = ' ';
-  for (int i = 0; i < len - 1; i++) {
+  for (int i = 0; i < len ; i++) {
     for (int j = i; j < len - 1; j++) {
       printf("%c ", S);
     }
@@ -15,7 +15,7 @@ void star_pyramid(int &len) {
 void inverted_star_pyramid(int &len) {
   char s = '*';
   char S = ' ';
-  for (int i = 0; i < len; i++) {
+  for (int i = 1; i < len; i++) {
     for (int j = 0; j < i; j++) {
       printf("%c ", S);
     }
@@ -28,7 +28,7 @@ void inverted_star_pyramid(int &len) {
 
 int main() {
   int len;
-  printf("%s", "Enter the length of an inverted pyramid: ");
+  printf("%s", "Enter the length of a diamond: ");
   scanf("%d", &len);
 
   star_pyramid(len);
