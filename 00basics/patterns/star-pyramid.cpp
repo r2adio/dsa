@@ -1,3 +1,9 @@
+// Enter the length of star pyramid: 5
+//         *
+//       * * *
+//     * * * * *
+//   * * * * * * *
+// * * * * * * * * *
 #include <cstdio>
 void star_pyramid(int &len) {
   char s = '*';
@@ -8,6 +14,9 @@ void star_pyramid(int &len) {
     }
     for (int k = 0; k < (2 * i) + 1; k++) {
       printf("%c ", s);
+    }
+    for (int l = i; l < len - 1; l++) {
+      printf("%c ", S);
     }
     printf("%c", '\n');
   }

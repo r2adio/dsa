@@ -1,5 +1,4 @@
 #include <cstdio>
-
 void square(int &len) {
   char s = '*';
   for (int i = 0; i < len; i++) {

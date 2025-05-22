@@ -1,3 +1,9 @@
+// Enter the length of an inverted pyramid: 5
+// * * * * * * * * *
+//   * * * * * * *
+//     * * * * *
+//       * * *
+//         *
 #include <cstdio>
 void inverted_star_pyramid(int &len) {
   char s = '*';
@@ -8,6 +14,9 @@ void inverted_star_pyramid(int &len) {
     }
     for (int k = 0; k < 2 * len - (2 * i + 1); k++) {
       printf("%c ", s);
+    }
+    for (int l = 0; l < i; l++) {
+      printf("%c ", S);
     }
     printf("%c", '\n');
   }

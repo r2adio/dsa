@@ -2,7 +2,7 @@
 void invert_pyramid(int &len) {
   char s = '*';
   for (int i = 0; i < len; i++) {
-     // for (int j = len; j >= len - i; j--) {
+    // for (int j = 0; j < len - i; j++) {
     for (int j = len; j > i; j--) {
       printf("%c ", s);
     }
