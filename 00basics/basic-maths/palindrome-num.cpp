@@ -1,30 +1,25 @@
+// palindrome: check if a number is palindrome
+
 #include <cstdio>
-bool palindrome(int &num, int &dup) {
-  // void palindrome(int &num, int &dup) {
+void palindrome(int &num) {
   int revNum = 0;
-  while (num > 0) {
+  int dup = num;
+  while (num != 0) {
     int rem = num % 10;
-    num = num / 10;
     revNum = (revNum * 10) + rem;
+    num = num / 10;
   }
   if (dup == revNum)
-    return true;
-  // printf("true\n");
+    printf("True\n");
   else
-    return false;
-  // printf("false\n");
+    printf("False\n");
 }
 
 int main() {
   int num;
-  int dup = num;
   printf("enter a number, check palindrome: ");
   scanf("%d", &num);
 
-  if (palindrome(num, dup))
-    printf("given number %d is a palindrome\n", num);
-  else
-    printf("%d is not a palindrome\n", num);
-  // palindrome(num, dup);
+  palindrome(num);
   return 0;
 }
