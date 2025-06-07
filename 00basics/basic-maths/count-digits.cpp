@@ -1,5 +1,4 @@
-// count digits: counts the number of digits in given number
-
+// Count Digits: counts the number of digits in given number
 #include <cmath>
 #include <cstdio>
 

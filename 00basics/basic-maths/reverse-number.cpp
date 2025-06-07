@@ -1,10 +1,9 @@
-// reverse number : generate the reverse of a given number
-
+// Reverse Number : generate the reverse of a given number
 #include <climits>
 #include <cstdio>
 
 // Time Complexity : O(log10 N + 1)
-// Space Complexity : O(1);
+// Space Complexity : O(1)
 int bruteforce(int &num) {
   long long revNum = 0;
   while (num != 0) {

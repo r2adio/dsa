@@ -2,7 +2,10 @@
 // each raised to power of number of digits
 #include <cmath>
 #include <cstdio>
-void amstrong(int &num) {
+
+// Time Complexity : O(log10 N + 1)
+// Space Complexity : O(1)
+void bruteforce(int &num) {
   int dup = num;
   int sum = 0;
   while (num != 0) {
@@ -21,6 +24,6 @@ int main(int argc, char *argv[]) {
   printf("enter a number, check amstrong: ");
   scanf("%d", &num);
 
-  amstrong(num);
+  bruteforce(num);
   return 0;
 }

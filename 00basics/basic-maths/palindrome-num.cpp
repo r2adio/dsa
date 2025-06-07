@@ -1,7 +1,9 @@
-// palindrome: check if a number is palindrome
-
+// Palindrome: check if a number is palindrome
 #include <cstdio>
-void palindrome(int &num) {
+
+// Time Complexity : O(log10 N + 1)
+// Space Complexity : O(1)
+bool bruteforce(int &num) {
   int revNum = 0;
   int dup = num;
   while (num != 0) {
@@ -10,9 +12,9 @@ void palindrome(int &num) {
     num = num / 10;
   }
   if (dup == revNum)
-    printf("True\n");
+    return true;
   else
-    printf("False\n");
+    return false;
 }
 
 int main() {
@@ -20,6 +22,9 @@ int main() {
   printf("enter a number, check palindrome: ");
   scanf("%d", &num);
 
-  palindrome(num);
+  if (bruteforce(num))
+    printf("True\n");
+  else
+    printf("False\n");
   return 0;
 }
