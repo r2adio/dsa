@@ -1,12 +1,13 @@
 #include <cstdio>
 #include <iostream>
-// #include <map>
+#include <map>
 
 int main(int argc, char *argv[]) {
   int n;
   scanf("%d", &n);
   int arr[n];
-  std::unordered_map<int, int> mpp; // pre compute
+  // std::unordered_map<int, int> mpp; // pre compute
+  std::map<int, int> mpp; // pre compute
   for (int i = 0; i < n; i++) {
     scanf("%d", &arr[i]);
     mpp[arr[i]]++;
@@ -18,10 +19,10 @@ int main(int argc, char *argv[]) {
   //   mpp[arr[i]]++;
   // }
 
-  // iterate in the map
-  for (auto it : mpp) {
-    std::cout << it.first << " -> " << it.second << '\n';
-  }
+  // // iterate in the map
+  // for (auto it : mpp) {
+  //   std::cout << it.first << " -> " << it.second << '\n';
+  // }
 
   int q;
   scanf("%d", &q);
