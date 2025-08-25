@@ -1,26 +1,29 @@
-#include <cstdio>
+/* Question:
+ * given string: "abcdabefc", queries: [a, c, z]
+ * for each query, find the times the char appears in string.
+ * eg, query:'a' => ans:2
+ */
+
 #include <iostream>
 #include <string>
 
 int main() {
-  // char *s;
-  // scanf("%255s", s);
   std::string s;
   std::cin >> s;
 
-  // pre compute
-  // int hash[26] = {0}; // for lower case letters only
-  int hash[2560];
+  // pre-storing
+  // int hash[26] = {0}; // for eower-case || upper-case
+  int hash[256] = {0}; // for eower-case && upper-case
   for (int i = 0; i < s.size(); i++) {
     // hash[s[i] - 'a']++;
     hash[s[i]]++;
   }
 
   int q;
-  scanf("%d", &q);
+  std::cin >> q;
   while (q--) {
     char c;
-    scanf("%c", &c);
+    std::cin >> c;
     // fetch
     // std::cout << hash[c - 'a'] << '\n';
     std::cout << hash[c] << '\n';

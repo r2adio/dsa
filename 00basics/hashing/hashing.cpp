@@ -1,35 +1,55 @@
-// NOTE: Hashing:
-// - pre-storing/fetching {in vague terms}
+/* INFO: Hashing:
+ * combination of steps : pre - storing, and fetching { in vague terms }
+ */
+
+/* Question:
+ * given an array of integers: [1, 2, 1, 3, 2] and queries: [1, 3, 4, 2, 10]
+ * for each query, find out how many times the number appears in array.
+ * eg, query: 1 => ans: 2
+ */
 
 #include <cstdio>
 int main() {
-  // array of size 5, {1,3,2,1,3}
-  // numbers for whom i require how many times they appear,
-  // 5: 1, 4, 2, 3, 12
-  // no. of queries: the queries
+  /* NOTE:
+   * size of an int array can only be 1e6 and 1e7,
+   * when declared inside and outside of the main function respectively.
+   */
   int n;
+  printf("enter the no. of elements for given array: ");
   scanf("%d", &n);
-  // size of an int array can only be 1e6 and 1e7, when declared inside and
-  // outside of the main function respectively.
   int arr[n];
+  printf("the elements of given array: ");
   for (int i = 0; i < n; i++) {
     scanf("%d", &arr[i]);
   }
 
-  // precompute
+  // pre-storing
   int hash[13] = {0}; // hash array
   for (int i = 0; i < n; i++) {
-    // for array element, go to that array index and do +1
+    // for each element arr[i], do hash[arr[i]] += 1
     hash[arr[i]] += 1;
   }
 
   int q;
+  printf("the arr.len for query array: ");
   scanf("%d", &q);
+  printf("array of queries: ");
   while (q--) {
     int number;
     scanf("%d", &number);
-    // fetch
+    // fetch the value of hash[number]
     printf("%d\n", hash[number]);
   }
   return 0;
 }
+
+/* Steps for solving the problem:
+ * 1. Pre-storing
+ *  - create array {name: hash} on size: 13, initialized w/ 0
+ *  - in hash array, store freq. of each element of the given array
+ *  - iterate over given array
+ *  - for each element arr[i], do hash[arr[i]] += 1
+ * 2. Fetching
+ *  - select each query, i.e. the number and, for the query
+ *  - fetch the value of hash[number]
+ */
