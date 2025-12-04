@@ -6,7 +6,7 @@ int main() {
   v.push_back(1);
   v.emplace_back(2);
   // v.push_back({1, 2});
-  v.emplace_back(1, 2);
+  // v.emplace_back(1, 2);
   // v.insert(v.end(), 0);
 
   // vector of pair data type

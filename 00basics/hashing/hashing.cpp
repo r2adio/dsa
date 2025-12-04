@@ -1,4 +1,4 @@
-/* INFO: Hashing:
+/* INFO: Hashing
  * combination of steps : pre - storing, and fetching { in vague terms }
  */
 
