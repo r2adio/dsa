@@ -1,15 +1,16 @@
-// Enter the half-length of a diamond: 5
-//         *
-//       * * *
-//     * * * * *
-//   * * * * * * *
-// * * * * * * * * *
-//   * * * * * * *
-//     * * * * *
-//       * * *
-//         *
-#include <cstdio>
-void star_pyramid(int &len) {
+/* pattern: diamond star
+ *
+ * example:
+    Enter the half-length of a diamond: 3
+        *
+      * * *
+    * * * * *
+      * * *
+        *
+ */
+
+#include <stdio.h>
+void star_pyramid(int len) {
   char s = '*';
   char S = ' ';
   for (int i = 0; i < len; i++) {
@@ -22,7 +23,7 @@ void star_pyramid(int &len) {
     printf("%c", '\n');
   }
 }
-void inverted_star_pyramid(int &len) {
+void inverted_star_pyramid(int len) {
   char s = '*';
   char S = ' ';
   for (int i = 1; i < len; i++) {
@@ -36,11 +37,12 @@ void inverted_star_pyramid(int &len) {
   }
 }
 
-int main() {
+int main(void) {
   int len;
   printf("%s", "Enter the half-length of a diamond: ");
   scanf("%d", &len);
 
   star_pyramid(len);
   inverted_star_pyramid(len);
+  return 0;
 }

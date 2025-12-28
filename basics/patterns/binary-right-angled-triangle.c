@@ -1,5 +1,14 @@
-#include <cstdio>
-void binary_triangle(int &len) {
+/* pattern: binary triangle
+ *
+ * example:
+    Enter the lenght of binary right triangle: 3
+    1
+    0 1
+    1 0 1
+ */
+
+#include <stdio.h>
+void binary_triangle(int len) {
   int initial;
   for (int i = 0; i < len; i++) {
     if (i % 2 == 0)
@@ -14,10 +23,11 @@ void binary_triangle(int &len) {
   }
 }
 
-int main() {
+int main(void) {
   printf("Enter the lenght of binary right triangle: ");
   int len;
   scanf("%d", &len);
 
   binary_triangle(len);
+  return 0;
 }

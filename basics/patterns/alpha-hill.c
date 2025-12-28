@@ -1,8 +1,17 @@
-#include <cstdio>
-void alpha_hill(int &len) {
+/* pattern: alpha hill
+ *
+ * example:
+    Enter the length of alpha-hill: 3
+    - - A - -
+    - A B A -
+    A B C B A
+ */
+
+#include <stdio.h>
+void alpha_hill(int len) {
   for (int i = 0; i < len; i++) {
-    char ch = 'A';
-    char S = '-';
+    char ch = 65; // 'A'
+    char S = 45;  // '-'
     for (int j = i; j < len - 1; j++) {
       printf("%c ", S);
     }
@@ -20,10 +29,11 @@ void alpha_hill(int &len) {
   }
 }
 
-int main() {
+int main(void) {
   int len;
   printf("Enter the length of alpha-hill: ");
   scanf("%d", &len);
 
   alpha_hill(len);
+  return 0;
 }

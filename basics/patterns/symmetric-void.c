@@ -1,7 +1,19 @@
-#include <cstdio>
-void symmetric_void(int &len) {
-  char s = '*';
-  char S = ' ';
+/* pattern: symmetric void
+ *
+ * example:
+    Enter the length of symmetric void: 3
+    * * * * * *
+    * *     * *
+    *         *
+    *         *
+    * *     * *
+    * * * * * *
+ */
+
+#include <stdio.h>
+void symmetric_void(int len) {
+  int s = 42;
+  int S = 32;
   // top portion of pattern
   int spaces = 0;
   for (int i = 0; i < len; i++) {
@@ -30,10 +42,11 @@ void symmetric_void(int &len) {
   }
 }
 
-int main() {
+int main(void) {
   int len;
   printf("Enter the length of symmetric void: ");
   scanf("%d", &len);
 
   symmetric_void(len);
+  return 0;
 }

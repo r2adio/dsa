@@ -1,11 +1,14 @@
-// Enter the length of star pyramid: 5
-//         *
-//       * * *
-//     * * * * *
-//   * * * * * * *
-// * * * * * * * * *
-#include <cstdio>
-void star_pyramid(int &len) {
+/* pattern: star pyramid
+ *
+ * example:
+    Enter the length of star pyramid: 3
+        *
+      * * *
+    * * * * *
+ */
+
+#include <stdio.h>
+void star_pyramid(int len) {
   char s = '*';
   char S = ' ';
   for (int i = 0; i < len; i++) {
@@ -22,10 +25,11 @@ void star_pyramid(int &len) {
   }
 }
 
-int main() {
+int main(void) {
   int len;
   printf("%s", "Enter the length of star pyramid: ");
   scanf("%d", &len);
 
   star_pyramid(len);
+  return 0;
 }

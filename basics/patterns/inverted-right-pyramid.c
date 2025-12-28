@@ -1,5 +1,14 @@
-#include <cstdio>
-void invert_pyramid(int &len) {
+/* pattern: inverted right pyramid
+ *
+ * example:
+    Enter the length of inverted pyramid: 3
+    * * *
+    * *
+    *
+ */
+
+#include <stdio.h>
+void invert_pyramid(int len) {
   char s = '*';
   for (int i = 0; i < len; i++) {
     // for (int j = 0; j < len - i; j++) {
@@ -10,10 +19,11 @@ void invert_pyramid(int &len) {
   }
 }
 
-int main() {
+int main(void) {
   int len;
   printf("%s", "Enter the length of inverted pyramid: ");
   scanf("%d", &len);
 
   invert_pyramid(len);
+  return 0;
 }

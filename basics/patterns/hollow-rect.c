@@ -1,5 +1,14 @@
-#include <cstdio>
-void hollow_void(int &len) {
+/* pattern: hollow rectangle
+ *
+ * example:
+    enter the length of a rectangle: 3
+    * * *
+    *   *
+    * * *
+ */
+
+#include <stdio.h>
+void hollow_void(int len) {
   char s = '*';
   char S = ' ';
   for (int i = 0; i < len; i++) {
@@ -11,7 +20,7 @@ void hollow_void(int &len) {
   }
 }
 
-int main(int argc, char *argv[]) {
+int main(void) {
   int len;
   printf("enter the length of a rectangle: ");
   scanf("%d", &len);

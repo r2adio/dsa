@@ -1,15 +1,16 @@
-// Enter the length of half-diamond: 5
-// *
-// * *
-// * * *
-// * * * *
-// * * * * *
-// * * * *
-// * * *
-// * *
-// *
-#include <cstdio>
-void half_diamond(int &len) {
+/* pattern: half diamond star
+ *
+ * example:
+    Enter the length of half-diamond: 3
+    *
+    * *
+    * * *
+    * *
+    *
+ */
+
+#include <stdio.h>
+void half_diamond(int len) {
   char s = '*';
   for (int i = 1; i <= 2 * len - 1; i++) {
     int dup = i;
@@ -34,10 +35,11 @@ void half_diamond(int &len) {
   // }
 }
 
-int main() {
+int main(void) {
   int len;
   printf("%s", "Enter the length of half-diamond: ");
   scanf("%d", &len);
 
   half_diamond(len);
+  return 0;
 }
