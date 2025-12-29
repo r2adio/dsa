@@ -9,7 +9,7 @@ int fibonacci(int n) {
   return fibonacci(n - 1) + fibonacci(n - 2);
 }
 
-int main(int argc, char *argv[]) {
+int main(void) {
   int n;
   printf("enter the index value of fibonacci series: ");
   scanf("%d", &n);

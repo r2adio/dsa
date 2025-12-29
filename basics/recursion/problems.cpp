@@ -1,5 +1,4 @@
 #include <cstdio>
-#include <stdio.h>
 
 // PRINT NAME N TIMES
 // Time Complexity: O(N)
@@ -61,7 +60,7 @@ void linn1B(int i, int n) {
   printf("%d\n", i);
 }
 
-int main() {
+int main(void) {
   int n;
   int i = 1;
   printf("enter a number: ");

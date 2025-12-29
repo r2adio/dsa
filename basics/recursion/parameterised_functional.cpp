@@ -16,7 +16,7 @@ int functional_summation(int n) {
   return n + functional_summation(n - 1);
 }
 
-int main() {
+int main(void) {
   // int sum = 0;
   // int n;
   // scanf("%d", &n);
@@ -36,4 +36,5 @@ int main() {
   //   prod *= i;
   // }
   // printf("%d\n", prod);
+  return 0;
 }
